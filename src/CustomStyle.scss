@@ -1,0 +1,243 @@
+*{
+    font-family: 'Inter', sans-serif;
+}
+
+.loading-wrapper{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content-wrapper{
+    padding: 30px 80px;
+    height: 100vh;
+}
+
+.btn {
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    min-width: 100px;
+}
+
+.btn--primary{
+    color: #fff !important;
+    background-color: #104ea1;
+    border-color: #104ea1;
+}
+
+.btn--primary:hover{
+    color: #fff;
+    background-color: #104ea1;
+    border-color: #104ea1;
+}
+
+.btn--primary:focus{
+    color: '#fff';
+    background-color: #104ea1;
+    border-color: #104ea1;
+}
+
+.table-wrapper{
+    .ant-table{
+        .ant-table-container{
+            width: 100%;
+            overflow-x: auto;
+            .ant-table-content{
+                min-width: 1000px;
+                width: 100%;
+                .ant-table-cell{
+                    .ant-badge-status{
+                        white-space: nowrap;
+                    }
+                    .anticon-star{
+                        width: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ant-table-wrapper{
+    background: $wht;
+    border: 1px solid $gry-d9;
+    border-radius: 12px;
+    overflow: hidden;
+    .ant-table{
+        border-bottom: 1px solid $gry-d9;
+        .ant-table-title{
+            padding: 0;
+            background-color: $dark-20;
+            .ant-space{
+                padding: 1rem;
+            }
+        }
+        .ant-table-container{
+            .ant-table-content{
+                table{
+                    th {
+                        background-color: $wht;
+                        border-bottom: 1px solid $gry-d9;
+                        &.ant-table-selection-column{
+                            padding-left: 20px;
+                        }
+                    }
+                    tr{
+                        td{
+                            background-color: $wht;
+                            &.ant-table-selection-column{
+                                padding-left: 20px;
+                            }
+                        }
+                        &:nth-child(2n - 1) {
+                            td{
+                                background-color: $dark-10;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ant-pagination{
+        margin: 12px;
+        .ant-pagination-item{
+            border: none;
+            background-color: $dark-10;
+            a{
+                color: $dark-60;
+            }
+            &.ant-pagination-item-active{
+                background-color: $main-blue-100;
+                a{
+                    color: $wht;
+                }
+            }
+        }
+        .ant-pagination-prev, .ant-pagination-next{
+            .ant-pagination-item-link{
+                border: none;
+                background-color: $dark-10;
+                color: $dark-60;
+            }
+        }
+    }
+}
+
+.ant-card{
+    margin-bottom: 1.5rem;
+    .ant-card-head{
+        .ant-card-head-title{
+            font-weight: 600;
+        }
+    }
+}
+
+.ant-form{
+    .ant-form-item{
+        margin-bottom: 1.5rem;
+        input[type=text], 
+        input[type=password], 
+        input[type=email], 
+        input[type=number] {
+            height: 40px;
+            padding: 5px 20px 5px 12px;
+            border-radius: 6px;
+        }
+    }
+}
+
+.ant-modal-content {
+    border-radius: 6px !important;
+}
+
+.btn{
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid $trnsp;
+    min-width: 100px;
+    + .btn{
+        margin-left: 0.5rem;
+    }
+    span{
+        color: inherit;
+    }
+    &.btn--primary{
+        color: $wht;
+        background-color: $main-blue-100;
+        border-color: $main-blue-100;
+        &:hover, &:focus{
+            color: $wht;
+            background-color: $main-blue-100;
+            border-color: $main-blue-100;
+        }
+    }
+    &.btn--o-primary{
+        color: $main-blue-100;
+        background-color: $wht;
+        border-color: $main-blue-3;
+        &:hover, &:focus{
+            color: $main-blue-100;
+            background-color: $wht;
+            border-color: $main-blue-100;
+        }
+    }
+    &.btn--info{
+        color: $wht;
+        background-color: $main-blue-100;
+        border-color: $main-blue-100;
+        &:hover, &:focus{
+            color: $wht;
+            background-color: $main-blue-100;
+            border-color: $main-blue-100;
+        }
+    }
+    &.btn--warning{
+        color: $wht;
+        background-color: $custom-orange-1;
+        border-color: $custom-orange-1;
+        &:hover, &:focus{
+            color: $wht;
+            background-color: $custom-orange-1;
+            border-color: $custom-orange-1;
+        }
+    }
+    &.btn--danger{
+        color: $wht;
+        background-color: $custom-red-1;
+        border-color: $custom-red-1;
+        &:hover, &:focus{
+            color: $wht;
+            background-color: $custom-red-1;
+            border-color: $custom-red-1;
+        }
+    }
+    &.btn--text{
+        height: initial;
+        color: inherit;
+        background-color: $wht;
+        border: none;
+        width: 100%;
+        text-align: left;
+        padding: 0 0.5rem;
+        &:hover, &:focus{
+            color: inherit;
+            background-color: $dark-30;
+            border: none;
+        }
+    }
+}
+
+.new-user-manual-btn {
+    background: #104EA1;
+    width: 100%;
+    height: 50px;
+    border-color: #104EA1;
+}
