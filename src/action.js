@@ -1,9 +1,7 @@
-const baseUrl = 'http://localhost:8080';
+const endpoint = `/register`;
 
-const url = `${baseUrl}/register`
-
-export const getMemberList = async () => {
-    await fetch(url,{
+export const getMemberList = async (url) => {
+    return await fetch(url+endpoint,{
         method:'GET'
     })
     .then(res=>res.json())
@@ -17,8 +15,8 @@ export const getMemberList = async () => {
     })
 }
 
-export const putMember = async (data) => {
-    await fetch(url,{
+export const putMember = async (url,data) => {
+    await fetch(url+endpoint,{
         method:'PUT',
         headers: {
             'Content-type': 'application/json'
